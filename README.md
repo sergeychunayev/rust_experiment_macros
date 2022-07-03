@@ -1,6 +1,7 @@
 # Experiments with Rust macros
 
 [![Rust](https://github.com/sergeychunayev/rust_experiment_macros/actions/workflows/rust.yml/badge.svg)](https://github.com/sergeychunayev/rust_experiment_macros/actions/workflows/rust.yml)
+[![rust-clippy analyze](https://github.com/sergeychunayev/rust_experiment_macros/actions/workflows/rust-clippy.yml/badge.svg)](https://github.com/sergeychunayev/rust_experiment_macros/actions/workflows/rust-clippy.yml)
 
 ## Packages
 
