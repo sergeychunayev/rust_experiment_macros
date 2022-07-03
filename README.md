@@ -4,7 +4,7 @@
 
 ## Packages
 
-[time_proc_macro_attribute](time_proc_macro_attribute/README.md)
+[time_proc_macro_attribute](time_proc_macro_attribute)
 #### Experiment with ```#[proc_macro_attribute]```
 #### Run
 ```code sh
