@@ -1,4 +1,4 @@
-# Experiments with rust macros
+# Experiments with Rust macros
 
 [![Rust](https://github.com/sergeychunayev/rust_experiment_macros/actions/workflows/rust.yml/badge.svg)](https://github.com/sergeychunayev/rust_experiment_macros/actions/workflows/rust.yml)
 
