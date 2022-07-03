@@ -1,5 +1,4 @@
 [workspace]
 members = [
-    "main",
     "time_proc_macro_attribute"
 ]
