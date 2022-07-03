@@ -15,7 +15,7 @@ pub fn timed(_attr: TokenStream, item: TokenStream) -> TokenStream {
     let original_fn_name = sig.ident.to_string();
     let original_fn_def_with_replaced_name = original_fn_def.replace(
         &format!("{}(", original_fn_name),
-        &format!("{}(", replaced_fn_name)
+        &format!("{}(", replaced_fn_name),
     );
     let sig_inputs: Vec<String> = sig.inputs
         .iter()
@@ -23,7 +23,7 @@ pub fn timed(_attr: TokenStream, item: TokenStream) -> TokenStream {
         .collect();
     let sig_var_names = sig.inputs
         .iter()
-        .map(|it |{
+        .map(|it| {
             let stream = it.to_token_stream();
             let s = stream.to_string();
             let parts: Vec<&str> = s.split(":").collect();
@@ -55,5 +55,4 @@ pub fn timed(_attr: TokenStream, item: TokenStream) -> TokenStream {
     let inner_fn: TokenStream = result_fn_def.parse().expect("Generated invalid tokens");
     // println!("{result_fn_def}");
     inner_fn.into()
-
 }
