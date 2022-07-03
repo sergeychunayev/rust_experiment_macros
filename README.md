@@ -1,1 +1,6 @@
-# rust_experiment_macros
+# Experiments with rust macros
+
+### Run
+```code shell
+cargo run
+```
