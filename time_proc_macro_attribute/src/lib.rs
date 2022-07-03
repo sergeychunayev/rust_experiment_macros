@@ -6,10 +6,9 @@ use uuid::Uuid;
 
 #[proc_macro_attribute]
 pub fn timed(_attr: TokenStream, item: TokenStream) -> TokenStream {
-    let replaced_fn_name = format!("___x_{}", Uuid::new_v4()).replace("-", "_");
+    let replaced_fn_name = format!("___x_{}", Uuid::new_v4()).replace('-', "_");
     let original_fn_def = item.to_string();
-    let item_clone = item.clone();
-    let item_fn = parse_macro_input!(item_clone as ItemFn);
+    let item_fn = parse_macro_input!(item as ItemFn);
     // let ItemFn { attrs: _attrs, vis, sig, block } = input;
     let sig = item_fn.sig;
     let original_fn_name = sig.ident.to_string();
@@ -26,7 +25,7 @@ pub fn timed(_attr: TokenStream, item: TokenStream) -> TokenStream {
         .map(|it| {
             let stream = it.to_token_stream();
             let s = stream.to_string();
-            let parts: Vec<&str> = s.split(":").collect();
+            let parts: Vec<&str> = s.split(':').collect();
             parts[0].to_string()
         })
         .collect::<Vec<String>>();
@@ -54,5 +53,5 @@ pub fn timed(_attr: TokenStream, item: TokenStream) -> TokenStream {
     );
     let inner_fn: TokenStream = result_fn_def.parse().expect("Generated invalid tokens");
     // println!("{result_fn_def}");
-    inner_fn.into()
+    inner_fn
 }
