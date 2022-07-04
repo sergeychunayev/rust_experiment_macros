@@ -19,12 +19,12 @@ fn f() -> String {
 
 #[timed]
 fn f_int() -> i64 {
-    return 42
+    return 42;
 }
 
 #[timed]
 fn f_args(a: i64, b: &str) -> String {
-    return format!("a={a}, b={b}", a = a, b = b)
+    return format!("a={a}, b={b}", a = a, b = b);
 }
 
 #[timed]
@@ -35,7 +35,7 @@ fn no_return() {
 #[timed]
 fn recursion(x: i64) -> i64 {
     if x < 10 {
-        return recursion(x + 1) + recursion(       x + 2)
+        return recursion(x + 1) + recursion(x + 2);
     }
-    return x
+    return x;
 }
