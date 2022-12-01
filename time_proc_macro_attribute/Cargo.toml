@@ -12,7 +12,7 @@ proc-macro = true
 [dependencies]
 syn = { version = "1.0.103", features = ["full", "fold", "printing"] }
 quote = "1.0.21"
-uuid = { version = "1.2.1", features = [
+uuid = { version = "1.2.2", features = [
     "v4",                # Lets you generate random UUIDs
     "fast-rng",          # Use a faster (but still sufficiently random) RNG
     "macro-diagnostics", # Enable better diagnostics for compile-time UUID ]
